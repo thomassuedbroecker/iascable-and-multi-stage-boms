@@ -47,7 +47,7 @@ In that case we have two files the BOM file and the `credentials` file.
 * Credenticials file `credentials.properties`
 
 ```sh
-export TF_VAR_server_url=https://c108-e.eu-gb.containers.cloud.ibm.com:31195
+export TF_VAR_server_url=https://YOUR_SERVER_URL
 export TF_VAR_login_user=IAM#[YOURID]/[YOUR_SERVER_URL]
 export TF_VAR_login_token=XXX
 ```
@@ -62,4 +62,22 @@ metadata:
 spec:
   modules:
   - name: ocp-login
+```
+
+### Verify the two options
+
+You can follow the [blog post to setup the local environment with Multipass](https://suedbroecker.net/2022/09/08/using-multipass-to-run-a-tools-virtual-machine/)
+
+#### Option 1
+
+##### Step 1: Navigate to the `example/01` folder
+
+```sh
+cd example/01
+```
+
+##### Step 2: Execute the `iascable` command
+
+```sh
+iascable build -i example-variable-bom.yaml
 ```

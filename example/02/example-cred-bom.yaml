@@ -1,0 +1,7 @@
+apiVersion: cloudnativetoolkit.dev/v1alpha1
+kind: BillOfMaterial
+metadata:
+  name: example
+spec:
+  modules:
+  - name: ocp-login

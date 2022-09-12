@@ -1,0 +1,16 @@
+apiVersion: cloudnativetoolkit.dev/v1alpha1
+kind: BillOfMaterial
+metadata:
+  name: example
+spec:
+  modules:
+  - name: ocp-login
+    alias: ocp-login
+    version: v1.6.0
+    variables:
+      - name: server_url
+        value: "https://YOUR_SERVER_URL"
+      - name: login_user
+        value: IAM#[YOURID]/[YOUR_SERVER_URL]
+      - name: login_token
+        value: XXX

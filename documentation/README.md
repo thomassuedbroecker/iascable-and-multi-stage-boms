@@ -178,6 +178,13 @@ iascable build -i example-cred-bom.yaml
 cd output
 ```
 
+#### Step 4: Copy the credentials.properties to the output folder
+
+```sh
+CURRENT_PATH=$(pwd)
+cp $CURRENT_PATH/../credentials.properties $CURRENT_PATH/credentials.properties
+```
+
 #### Step 4: Map the current folder to the Multpass cli-tools VM 
 
 ```sh
@@ -190,27 +197,34 @@ multipass mount $PWD cli-tools:/automation
 multipass shell cli-tools
 ```
 
-#### Step 6: Navigate to the automation folder
+#### Step 6: In the virtual machine navigate to the automation folder
 
 ```sh
 cd ../../automation
 ls
 ```
 
-#### Step 7: Now navigate to the `example` folder
+#### Step 7: Source the `credentials.properties` as environment variables and show one variable
+
+```sh
+source credentials.properties
+echo $TF_VAR_login_user
+```
+
+#### Step 8: Now navigate to the `example` folder
 
 ```sh
 cd example/
 ls
 ```
 
-#### Step 8: Execute apply.sh
+#### Step 9: Execute apply.sh
 
 ```sh
 sh apply.sh
 ```
 
-#### Step 9: Enter `yes` to apply the Terraform code
+#### Step 10: Enter `yes` to apply the Terraform code
 
 ```sh
 Do you want to perform these actions?

@@ -76,7 +76,15 @@ You can follow the [blog post to setup the local environment with Multipass](htt
 cd example/01
 ```
 
-#### Step 2: Execute the `iascable` command
+#### Step 2: Edit the BOM and then execute the `iascable` command
+
+* `BOM` 
+
+```sh
+nano ./example-variable-bom.yaml
+```
+
+* Execute iascable
 
 ```sh
 iascable build -i example-variable-bom.yaml
@@ -138,16 +146,30 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
 ### 3.2 Option 2
 
-#### Step 1: Navigate to the `example/01` folder
+#### Step 1: Navigate to the `example/02` folder
 
 ```sh
 cd example/02
 ```
 
-#### Step 2: Execute the `iascable` command
+#### Step 2: Create a `credentials.properties` file and edit the file
+
+* Copy
 
 ```sh
-iascable build -i example-variable-bom.yaml
+cp ./credentials.properties-template ./credentials.properties
+```
+
+* Edit
+
+```sh
+nano ./credentials.properties
+```
+
+#### Step 3: Execute the `iascable` command
+
+```sh
+iascable build -i example-cred-bom.yaml
 ```
 
 #### Step 3: Navigate to the `output` folder

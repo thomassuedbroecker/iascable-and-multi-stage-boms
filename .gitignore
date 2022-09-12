@@ -30,3 +30,4 @@ override.tf.json
 example/01/example-variable.yaml
 documentation/.DS_Store
 documentation/.DS_Store
+example/02/credentials.properties

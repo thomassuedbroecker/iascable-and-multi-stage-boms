@@ -81,3 +81,69 @@ cd example/01
 ```sh
 iascable build -i example-variable-bom.yaml
 ```
+
+##### Step 3: Navigate to the `output` folder
+
+```sh
+cd output
+```
+
+##### Step 3: Navigate to the `output` folder
+
+```sh
+cd output
+```
+
+##### Step 3: Navigate to the `output` folder
+
+```sh
+cd output
+```
+
+##### Step 4: Map the current folder to the Multpass cli-tools VM 
+
+```sh
+multipass mount $PWD cli-tools:/automation
+```
+
+##### Step 5: Open the interactive shell
+
+```sh
+multipass shell cli-tools
+```
+
+##### Step 6: Navigate to the automation folder
+
+```sh
+cd ../../automation
+ls
+```
+
+##### Step 7: Now navigate to the `example` folder
+
+```sh
+cd example/
+ls
+```
+
+##### Step 7: Execute apply.sh
+
+```sh
+sh apply.sh
+```
+
+##### Step 7: Enter `yes` to apply the Terraform code
+
+```sh
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value:
+```
+
+##### Step 8: Now you should see the following output
+
+```sh
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+```

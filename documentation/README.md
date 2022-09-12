@@ -2,11 +2,11 @@
 
 This project does verify how the usage iascable and reuse of existing environments works with BOMs. 
 
-## Objective
+## 1. Objective
 
 The objective is to reuse existing cloud resources in this example we will an OpenShift cluster.
 
-## How to handle variable input
+## 2. How to handle variable input
 
 First let us have a look how to handle the input of the variables we need to use when we create new Terraform code with iascable.
 
@@ -64,63 +64,63 @@ spec:
   - name: ocp-login
 ```
 
-### Verify the two options
+## 3 Verify the two options
 
 You can follow the [blog post to setup the local environment with Multipass](https://suedbroecker.net/2022/09/08/using-multipass-to-run-a-tools-virtual-machine/)
 
-#### Option 1
+### 3.1 Option 1
 
-##### Step 1: Navigate to the `example/01` folder
+#### Step 1: Navigate to the `example/01` folder
 
 ```sh
 cd example/01
 ```
 
-##### Step 2: Execute the `iascable` command
+#### Step 2: Execute the `iascable` command
 
 ```sh
 iascable build -i example-variable-bom.yaml
 ```
 
-##### Step 3: Navigate to the `output` folder
+#### Step 3: Navigate to the `output` folder
 
 ```sh
 cd output
 ```
 
-##### Step 4: Map the current folder to the Multpass cli-tools VM 
+#### Step 4: Map the current folder to the Multpass cli-tools VM 
 
 ```sh
 multipass mount $PWD cli-tools:/automation
 ```
 
-##### Step 5: Open the interactive shell
+#### Step 5: Open the interactive shell
 
 ```sh
 multipass shell cli-tools
 ```
 
-##### Step 6: Navigate to the automation folder
+#### Step 6: Navigate to the automation folder
 
 ```sh
 cd ../../automation
 ls
 ```
 
-##### Step 7: Now navigate to the `example` folder
+#### Step 7: Now navigate to the `example` folder
 
 ```sh
 cd example/
 ls
 ```
 
-##### Step 8: Execute apply.sh
+#### Step 8: Execute apply.sh
 
 ```sh
 sh apply.sh
 ```
 
-##### Step 9: Enter `yes` to apply the Terraform code
+#### Step 9: Enter `yes` to apply the Terraform code
 
 ```sh
 Do you want to perform these actions?
@@ -130,7 +130,75 @@ Do you want to perform these actions?
   Enter a value:
 ```
 
-##### Step 10: Now you should see the following output
+#### Step 10: Now you should see the following output
+
+```sh
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+```
+
+### 3.2 Option 2
+
+#### Step 1: Navigate to the `example/01` folder
+
+```sh
+cd example/02
+```
+
+#### Step 2: Execute the `iascable` command
+
+```sh
+iascable build -i example-variable-bom.yaml
+```
+
+#### Step 3: Navigate to the `output` folder
+
+```sh
+cd output
+```
+
+#### Step 4: Map the current folder to the Multpass cli-tools VM 
+
+```sh
+multipass mount $PWD cli-tools:/automation
+```
+
+#### Step 5: Open the interactive shell
+
+```sh
+multipass shell cli-tools
+```
+
+#### Step 6: Navigate to the automation folder
+
+```sh
+cd ../../automation
+ls
+```
+
+#### Step 7: Now navigate to the `example` folder
+
+```sh
+cd example/
+ls
+```
+
+#### Step 8: Execute apply.sh
+
+```sh
+sh apply.sh
+```
+
+#### Step 9: Enter `yes` to apply the Terraform code
+
+```sh
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value:
+```
+
+#### Step 10: Now you should see the following output
 
 ```sh
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.

@@ -88,18 +88,6 @@ iascable build -i example-variable-bom.yaml
 cd output
 ```
 
-##### Step 3: Navigate to the `output` folder
-
-```sh
-cd output
-```
-
-##### Step 3: Navigate to the `output` folder
-
-```sh
-cd output
-```
-
 ##### Step 4: Map the current folder to the Multpass cli-tools VM 
 
 ```sh
@@ -126,13 +114,13 @@ cd example/
 ls
 ```
 
-##### Step 7: Execute apply.sh
+##### Step 8: Execute apply.sh
 
 ```sh
 sh apply.sh
 ```
 
-##### Step 7: Enter `yes` to apply the Terraform code
+##### Step 9: Enter `yes` to apply the Terraform code
 
 ```sh
 Do you want to perform these actions?
@@ -142,7 +130,7 @@ Do you want to perform these actions?
   Enter a value:
 ```
 
-##### Step 8: Now you should see the following output
+##### Step 10: Now you should see the following output
 
 ```sh
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.

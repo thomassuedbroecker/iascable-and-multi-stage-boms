@@ -12,7 +12,7 @@ First let us have a look how to handle the input of the variables we need to use
 
 You can use following [blog post to login to you IBM Cloud Red Hat OpenShift cluster using the Red Hat OpenShift CLI](https://suedbroecker.net/2021/11/15/log-in-to-the-an-ibm-cloud-red-hat-openshift-cluster-using-the-ibm-cloud-and-oc-cli%c2%b6/).
 
-> You can get the needed login values by using `"Copy ling command"` in the OpenShift UI.
+> You can get the needed login values pressing the button `"Copy login command"` in the OpenShift UI.
 
 ![](images/reuse-existing-resources-01.png)
 

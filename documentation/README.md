@@ -70,13 +70,15 @@ You can follow the [blog post to setup the local environment with Multipass](htt
 
 ### 3.1 Option 1
 
-#### Step 1: Navigate to the `example/01` folder
+#### 3.1.1 Terminal in the local machine 
+
+##### Step 1: Navigate to the `example/01` folder
 
 ```sh
 cd example/01
 ```
 
-#### Step 2: Edit the BOM and then execute the `iascable` command
+##### Step 2: Edit the BOM and then execute the `iascable` command
 
 * `BOM` 
 
@@ -90,45 +92,53 @@ nano ./example-variable-bom.yaml
 iascable build -i example-variable-bom.yaml
 ```
 
-#### Step 3: Navigate to the `output` folder
+##### Step 3: Navigate to the `output` folder
 
 ```sh
 cd output
 ```
 
-#### Step 4: Map the current folder to the Multpass cli-tools VM 
+##### Step 4: Map the current `output` folder to the running Multipass `cli-tools VM` 
+
+Ensure you started the `Multipass cli-tools VM` before you execute the following command:
 
 ```sh
 multipass mount $PWD cli-tools:/automation
 ```
 
-#### Step 5: Open the interactive shell
+#### 3.1.2 Terminal inside the `cli-tools VM`
+
+Now we have mapped the `output` folder to the `cli-tools VM`. We can use the installed [`CLI tools`](https://github.com/cloud-native-toolkit/image-cli-tools) inside the `cli-tools VM` to apply the Terraform code. 
+
+> All changes we made in with `cli-tools VM` will be save in the map folder on our local machine.
+
+#### Step 1: Open the interactive shell
 
 ```sh
 multipass shell cli-tools
 ```
 
-#### Step 6: Navigate to the automation folder
+#### Step 2: Navigate to the automation folder
 
 ```sh
 cd ../../automation
 ls
 ```
 
-#### Step 7: Now navigate to the `example` folder
+#### Step 3: Now navigate to the `example` folder
 
 ```sh
 cd example/
 ls
 ```
 
-#### Step 8: Execute apply.sh
+#### Step 4: Execute apply.sh
 
 ```sh
 sh apply.sh
 ```
 
-#### Step 9: Enter `yes` to apply the Terraform code
+#### Step 5: Enter `yes` to apply the Terraform code
 
 ```sh
 Do you want to perform these actions?
@@ -138,7 +148,7 @@ Do you want to perform these actions?
   Enter a value:
 ```
 
-#### Step 10: Now you should see the following output
+#### Step 6: Now you should see the following output
 
 ```sh
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.

@@ -24,3 +24,21 @@ Here's the schema of how a bill of materals `bom.yaml` should be constructed:
 - `spec.modules.dependencies`: **List** of module dependencies
 - `spec.modules.dependencies.name`: Module name
 - `spec.modules.dependencies.ref`: Module reference (alias) if dependent modules appears more than once in the BOM (or generated terraform)
+
+### 2. Reference for [credentials.template](https://github.com/cloud-native-toolkit/iascable/blob/main/credentials.template)
+
+The template `credentials` file needs to be in the `output` folder after you have applied the `iascable` command.
+
+```sh
+# Add the values for the Credentials to access the IBM Cloud
+# Instructions to access this information can be found in the README.MD
+classic.username=""
+classic.api.key=""
+ibmcloud.api.key=""
+# Authentication to OCP can either be performed with username/password or token
+# If token is provided it will take precedence
+login.user=""
+login.password=""
+login.token=""
+server.url=""
+```

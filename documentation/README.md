@@ -218,6 +218,13 @@ Now we have mapped the `output` folder to the `cli-tools VM`. We can use the ins
 multipass shell cli-tools
 ```
 
+* Example output:
+
+```sh
+Last login: Mon Sep 12 18:06:24 2022 from 192.168.64.1
+ubuntu@cli-tools:~$ 
+```
+
 #### Step 2: In the virtual machine navigate to the automation folder
 
 ```sh

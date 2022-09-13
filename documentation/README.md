@@ -209,7 +209,7 @@ multipass mount $PWD cli-tools:/automation
 
 Now we have mapped the `output` folder to the `cli-tools VM`. We can use the installed [`CLI tools`](https://github.com/cloud-native-toolkit/image-cli-tools) inside the `cli-tools VM` to apply the Terraform code. 
 
-> All changes we made in with `cli-tools VM` will be save in the map folder on our local machine.
+> All changes we made in with `cli-tools VM` will be saved in the mapped `output` folder on our local machine.
 
 
 #### Step 1: Open the interactive shell

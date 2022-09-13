@@ -12,6 +12,7 @@ docs_dir: documentation
 # Navigation
 nav:
   - 1. Overview: ./README.md
+  - 2. References: ./references.md
 
 ## DO NOT CHANGE BELOW THIS LINE
 
